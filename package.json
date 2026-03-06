@@ -1,0 +1,12 @@
+{
+  "name": "christine-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node frontend/backend/server.js",
+    "postinstall": "cd frontend/backend && npm install"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
