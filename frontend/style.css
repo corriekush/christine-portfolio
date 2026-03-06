@@ -1,0 +1,61 @@
+body {
+    background-color: #05050a;
+    background-image: radial-gradient(circle at 50% 0%, #1a0b2e 0%, #05050a 70%);
+    font-family: 'Inter', sans-serif;
+}
+
+.font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Glassmorphism Utilities */
+.glass-nav {
+    background: rgba(5, 5, 10, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(176, 38, 255, 0.1);
+}
+
+.glass-card {
+    background: rgba(20, 15, 35, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(176, 38, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Neon Glows */
+.neon-text {
+    text-shadow: 0 0 10px rgba(176, 38, 255, 0.8), 0 0 20px rgba(176, 38, 255, 0.4);
+}
+
+.neon-btn {
+    background: linear-gradient(90deg, #7b2cbf 0%, #b026ff 100%);
+    box-shadow: 0 0 15px rgba(176, 38, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+    box-shadow: 0 0 25px rgba(176, 38, 255, 0.8), 0 0 50px rgba(176, 38, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.neon-glow {
+    box-shadow: 0 0 10px #b026ff, 0 0 20px #b026ff;
+}
+
+/* Simple Background Particles created via CSS */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(176, 38, 255, 0.3);
+    animation: float 15s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+.neon-hover:hover {
+    text-shadow: 0 0 15px currentColor;
+}
