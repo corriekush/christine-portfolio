@@ -46,6 +46,20 @@ app.post('/api/contact', (req, res) => {
     res.status(200).json({ success: 'Message sent successfully!' });
 });
 
+// Route to download the CV (forces download with a friendly filename)
+app.get('/download/cv', (req, res) => {
+    const filePath = path.join(__dirname, '..', 'christine_wacera_CV.pdf');
+    // Use res.download to set proper headers for attachment
+    res.download(filePath, 'Christine_Wacera_CV.pdf', (err) => {
+        if (err) {
+            console.error('Error sending CV:', err);
+            // If file does not exist or other error, return 404/500
+            if (err.code === 'ENOENT') return res.status(404).send('CV not found');
+            return res.status(500).send('Error downloading file');
+        }
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
