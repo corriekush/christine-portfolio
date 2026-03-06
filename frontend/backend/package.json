@@ -2,9 +2,15 @@
   "name": "wacera-portfolio",
   "version": "1.0.0",
   "description": "Futuristic Portfolio for Christine Wacera",
-  "main": "backend/server.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
+  },
+  "author": "Christine Wacera",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/corriekush/christine-portfolio.git"
   },
   "dependencies": {
     "cors": "^2.8.5",
